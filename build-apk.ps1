@@ -37,7 +37,7 @@ $resources = Join-Path $WorkDir 'resources.zip'
 $unsigned = Join-Path $WorkDir 'unsigned.apk'
 Run-Checked $aapt @('compile','--dir',(Join-Path $main 'res'),'-o',$resources)
 Run-Checked $aapt @('link','-o',$unsigned,'-I',$AndroidJar,'--manifest',$manifestPath,'--java',$generated,
-    '--min-sdk-version','31','--target-sdk-version','36','--version-code','2','--version-name','2.0-preview',
+    '--min-sdk-version','31','--target-sdk-version','36','--version-code','3','--version-name','2.0-public-preview',
     '-A',(Join-Path $main 'assets'),$resources)
 $sources = @(Get-ChildItem -LiteralPath (Join-Path $main 'java'),$generated -Filter '*.java' -Recurse | ForEach-Object { '"' + $_.FullName.Replace('\','/') + '"' })
 $argsFile = Join-Path $WorkDir 'java-sources.txt'
