@@ -8,7 +8,7 @@ JDK 17, Android SDK 36, Gradle 8.11.1 및 AGP 8.10.1을 사용합니다. `node t
 
 ## APK 다운로드
 
-[Android ARM64 시험판 다운로드](https://github.com/chabin0000/gpt-todo-widget/releases/latest)
+[Android ARM64 시험판 다운로드](https://github.com/chabin0000/gpt-todo-widget/releases/tag/v2.0-public-preview)
 
 설치 후 앱에서 본인의 ChatGPT Page 주소를 입력하고 계정을 연결하세요. 공개 APK에는 예시 목록만 포함됩니다.
 
