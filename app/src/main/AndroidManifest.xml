@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36" />
+    <application android:label="GPT 할 일 위젯" android:icon="@drawable/ic_app"
+        android:theme="@style/AppTheme" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="true">
+        <service android:name=".SyncJobService" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".ConnectionService" android:exported="false" android:foregroundServiceType="dataSync" />
+        <activity android:name=".MainActivity" android:exported="true" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WidgetActionActivity" android:exported="false"
+            android:theme="@android:style/Theme.NoDisplay" android:excludeFromRecents="true"
+            android:taskAffinity="" android:noHistory="true" />
+        <receiver android:name=".DarkWidget" android:label="할 일 · 다크 4×2" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_dark_info" />
+        </receiver>
+        <receiver android:name=".LightWidget" android:label="할 일 · 화이트 4×2" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_light_info" />
+        </receiver>
+    </application>
+</manifest>

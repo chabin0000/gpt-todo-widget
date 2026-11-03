@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp" android:background="@drawable/widget_light_background">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="오늘" android:textColor="#171717" android:textSize="16sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="10dp" android:text="최우선 과제" android:textColor="#171717" android:textSize="13sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="12dp" android:text="☐ Sample task" android:textColor="#252525" android:textSize="12sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="10dp" android:text="☐ Sample task" android:textColor="#252525" android:textSize="12sp" android:textStyle="bold" />
+</LinearLayout>

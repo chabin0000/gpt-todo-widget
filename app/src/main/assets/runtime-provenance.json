@@ -1,0 +1,9 @@
+{
+  "version": "0.155.1-linux-arm64",
+  "source": "https://registry.npmjs.org/@openai/codex/-/codex-0.155.1-linux-arm64.tgz",
+  "packageIntegrity": "sha512-X3fRXm2orhJ3KeB8LgKym4XDUiQaqaOGuaa181bcHTsQI7C8m6tcQQbQsKDzT/2IibikzgYL82jvsgMbq43jww==",
+  "binarySha256": "298d3d73d0bbc1367e58a370df5b6216fe30ce0a92e8b6b0afb0377a958dc335",
+  "platform": "aarch64-unknown-linux-musl",
+  "androidArm64Execution": "unverified",
+  "androidX64Diagnostic": "Linux x86_64 binary exits 159 under Android app syscall filter"
+}
